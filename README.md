@@ -3,9 +3,9 @@
 This repository contains NDK support for the Intel Stratix 10 DX FPGA Development Kit (DK-DEV-1SDX-P).
 
 Additional repositories are needed to build the NDK design for the FPGA:
-- [NDK Minimal Application (top-level repository)](../../../../ndk-app-minimal/)
-- [NDK Core](../../../../ndk-core/)
-- [Open FPGA Modules](../../../../ofm/)
+- [NDK Minimal Application (top-level repository)](https://github.com/CESNET/ndk-app-minimal/)
+- [NDK Core](https://github.com/CESNET/ndk-core)
+- [Open FPGA Modules](https://github.com/CESNET/ofm/)
 
 ## License
 
