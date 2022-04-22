@@ -16,7 +16,7 @@ create_clock -period 3.2  -name {clk_312p5m_qsfp2}    [get_ports {CLK_312P5M_QSF
 create_clock -period 7.5  -name {clk_133m_dimm_0}     [get_ports {CLK_133M_DIMM_0_P}]
 create_clock -period 7.5  -name {clk_133m_dimm_1}     [get_ports {CLK_133M_DIMM_1_P}]
 
-set MI_CLK [get_clocks cm_i|s10_iopll_ip|iopll_0_outclk3]
+set MI_CLK [get_clocks cm_i|clk_gen_i|iopll_i|iopll_0_outclk3]
 set OSC_CLK [get_clocks ALTERA_INSERTED_INTOSC_FOR_TRS|divided_osc_clk]
 set TCK_CLK [get_clocks altera_reserved_tck]
 set EMIF0_CLK [get_clocks s10_emif_ip_ch0_i|emif_s10_0_core_cal_master_clk]
