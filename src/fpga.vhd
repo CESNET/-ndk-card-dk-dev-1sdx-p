@@ -313,7 +313,8 @@ begin
         SYSCLK                  => FPGA_SYSCLK0_100M_P,
         SYSRST                  => '0',
 
-        PCIE_SYSCLK             => PCIE1_SYSCLK1_P & PCIE1_SYSCLK0_P & PCIE0_SYSCLK1_P & PCIE0_SYSCLK0_P,
+        PCIE_SYSCLK_P           => PCIE1_SYSCLK1_P & PCIE1_SYSCLK0_P & PCIE0_SYSCLK1_P & PCIE0_SYSCLK0_P,
+        PCIE_SYSCLK_N           => (others => '0'),
         PCIE_SYSRST_N           => PCIE1_SYSRST_N & PCIE0_SYSRST_N,
 
         PCIE_RX_P(1*PCIE_LANES-1 downto 0*PCIE_LANES) => PCIE0_RX_P,
