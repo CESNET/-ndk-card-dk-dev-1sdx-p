@@ -47,7 +47,7 @@ AlteraBegin;
 	ChainType(JTAG);
 AlteraEnd;" > ${filename}".cdf"
 
-    $quartus_path"/"quartus_pgm -c ${cable_index} ${filename}.cdf
+    quartus_pgm -c ${cable_index} ${filename}.cdf
     rm ${filename}.cdf
     echo "Programming Successful!"
 fi
