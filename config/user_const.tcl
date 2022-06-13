@@ -32,6 +32,10 @@ set ETH_PORT_SPEED(1) $env(ETH_PORT_SPEED)
 # NOTE: at this moment, all ports must have same number of channels !
 set ETH_PORT_CHAN(0) $env(ETH_PORT_CHAN)
 set ETH_PORT_CHAN(1) $env(ETH_PORT_CHAN)
+# Number of lanes for each one of the ETH_PORTS
+# Typical values: 4 (QSFP), 8 (QSFP-DD)
+set ETH_PORT_LANES(0) 4
+set ETH_PORT_LANES(1) 4
 
 # ==============================================================================
 # PCIe parameters (not all combinations work):

@@ -138,45 +138,45 @@ end entity;
 architecture FULL of FPGA is
 
     component emif_s10dx is
-              port (
-                      local_reset_req           : in    std_logic                      := 'X';             
-                      local_reset_done          : out   std_logic;                                         
-                      pll_ref_clk               : in    std_logic                      := 'X';             
-                      pll_ref_clk_out           : out   std_logic;                                         
-                      pll_locked                : out   std_logic;                                         
-                      oct_rzqin                 : in    std_logic                      := 'X';             
-                      mem_ck                    : out   std_logic_vector(0 downto 0);                      
-                      mem_ck_n                  : out   std_logic_vector(0 downto 0);                      
-                      mem_a                     : out   std_logic_vector(16 downto 0);                     
-                      mem_act_n                 : out   std_logic_vector(0 downto 0);                      
-                      mem_ba                    : out   std_logic_vector(1 downto 0);                      
-                      mem_bg                    : out   std_logic_vector(1 downto 0);                      
-                      mem_cke                   : out   std_logic_vector(0 downto 0);                      
-                      mem_cs_n                  : out   std_logic_vector(0 downto 0);                      
-                      mem_odt                   : out   std_logic_vector(0 downto 0);                      
-                      mem_reset_n               : out   std_logic_vector(0 downto 0);                      
-                      mem_par                   : out   std_logic_vector(0 downto 0);                      
-                      mem_alert_n               : in    std_logic_vector(0 downto 0)   := (others => 'X'); 
-                      mem_dqs                   : inout std_logic_vector(8 downto 0)   := (others => 'X'); 
-                      mem_dqs_n                 : inout std_logic_vector(8 downto 0)   := (others => 'X'); 
-                      mem_dq                    : inout std_logic_vector(71 downto 0)  := (others => 'X'); 
-                      mem_dbi_n                 : inout std_logic_vector(8 downto 0)   := (others => 'X'); 
-                      local_cal_success         : out   std_logic;                                         
-                      local_cal_fail            : out   std_logic;                                         
-                      emif_usr_reset_n          : out   std_logic;                                         
-                      emif_usr_clk              : out   std_logic;                                         
-                      ctrl_ecc_user_interrupt_0 : out   std_logic;                                         
-                      amm_ready_0               : out   std_logic;                                         
-                      amm_read_0                : in    std_logic                      := 'X';             
-                      amm_write_0               : in    std_logic                      := 'X';             
-                      amm_address_0             : in    std_logic_vector(26 downto 0)  := (others => 'X'); 
-                      amm_readdata_0            : out   std_logic_vector(511 downto 0);                    
-                      amm_writedata_0           : in    std_logic_vector(511 downto 0) := (others => 'X'); 
-                      amm_burstcount_0          : in    std_logic_vector(6 downto 0)   := (others => 'X'); 
-                      amm_byteenable_0          : in    std_logic_vector(63 downto 0)  := (others => 'X'); 
-                      amm_readdatavalid_0       : out   std_logic                                          
-              );
-      end component;
+    port (
+        local_reset_req           : in    std_logic                      := 'X';             
+        local_reset_done          : out   std_logic;                                         
+        pll_ref_clk               : in    std_logic                      := 'X';             
+        pll_ref_clk_out           : out   std_logic;                                         
+        pll_locked                : out   std_logic;                                         
+        oct_rzqin                 : in    std_logic                      := 'X';             
+        mem_ck                    : out   std_logic_vector(0 downto 0);                      
+        mem_ck_n                  : out   std_logic_vector(0 downto 0);                      
+        mem_a                     : out   std_logic_vector(16 downto 0);                     
+        mem_act_n                 : out   std_logic_vector(0 downto 0);                      
+        mem_ba                    : out   std_logic_vector(1 downto 0);                      
+        mem_bg                    : out   std_logic_vector(1 downto 0);                      
+        mem_cke                   : out   std_logic_vector(0 downto 0);                      
+        mem_cs_n                  : out   std_logic_vector(0 downto 0);                      
+        mem_odt                   : out   std_logic_vector(0 downto 0);                      
+        mem_reset_n               : out   std_logic_vector(0 downto 0);                      
+        mem_par                   : out   std_logic_vector(0 downto 0);                      
+        mem_alert_n               : in    std_logic_vector(0 downto 0)   := (others => 'X'); 
+        mem_dqs                   : inout std_logic_vector(8 downto 0)   := (others => 'X'); 
+        mem_dqs_n                 : inout std_logic_vector(8 downto 0)   := (others => 'X'); 
+        mem_dq                    : inout std_logic_vector(71 downto 0)  := (others => 'X'); 
+        mem_dbi_n                 : inout std_logic_vector(8 downto 0)   := (others => 'X'); 
+        local_cal_success         : out   std_logic;                                         
+        local_cal_fail            : out   std_logic;                                         
+        emif_usr_reset_n          : out   std_logic;                                         
+        emif_usr_clk              : out   std_logic;                                         
+        ctrl_ecc_user_interrupt_0 : out   std_logic;                                         
+        amm_ready_0               : out   std_logic;                                         
+        amm_read_0                : in    std_logic                      := 'X';             
+        amm_write_0               : in    std_logic                      := 'X';             
+        amm_address_0             : in    std_logic_vector(26 downto 0)  := (others => 'X'); 
+        amm_readdata_0            : out   std_logic_vector(511 downto 0);                    
+        amm_writedata_0           : in    std_logic_vector(511 downto 0) := (others => 'X'); 
+        amm_burstcount_0          : in    std_logic_vector(6 downto 0)   := (others => 'X'); 
+        amm_byteenable_0          : in    std_logic_vector(63 downto 0)  := (others => 'X'); 
+        amm_readdatavalid_0       : out   std_logic                                          
+    );
+    end component;
     
     -- DMA debug parameters
     constant DMA_GEN_LOOP_EN : boolean := true;
@@ -249,14 +249,14 @@ begin
     BMC_I2C2_DISABLE <= '1';
     BMC_I2C3_DISABLE <= '0';
 
-    DDR4_DIMM_CH0_RESET_N               <= ddr4_reset_n (0);
-    DDR4_DIMM_CH0_ACT_N                 <= ddr4_act_n   (0);
-    DDR4_DIMM_CH0_PAR                   <= ddr4_par     (0);
-    ddr4_alert_n         (0)            <= DDR4_DIMM_CH0_ALERT_N;
-    DDR4_DIMM_CH1_RESET_N(0)            <= ddr4_reset_n (1);
-    DDR4_DIMM_CH1_ACT_N  (0)            <= ddr4_act_n   (1);
-    DDR4_DIMM_CH1_PAR    (0)            <= ddr4_par     (1);
-    ddr4_alert_n         (1)            <= DDR4_DIMM_CH1_ALERT_N(0);
+    DDR4_DIMM_CH0_RESET_N    <= ddr4_reset_n (0);
+    DDR4_DIMM_CH0_ACT_N      <= ddr4_act_n   (0);
+    DDR4_DIMM_CH0_PAR        <= ddr4_par     (0);
+    ddr4_alert_n         (0) <= DDR4_DIMM_CH0_ALERT_N;
+    DDR4_DIMM_CH1_RESET_N(0) <= ddr4_reset_n (1);
+    DDR4_DIMM_CH1_ACT_N  (0) <= ddr4_act_n   (1);
+    DDR4_DIMM_CH1_PAR    (0) <= ddr4_par     (1);
+    ddr4_alert_n         (1) <= DDR4_DIMM_CH1_ALERT_N(0);
 
     cm_i : entity work.FPGA_COMMON
     generic map (
@@ -353,26 +353,26 @@ begin
         QSFP_MODSEL_N           => open,
         QSFP_LPMODE             => open,
         QSFP_RESET_N            => open,
-        QSFP_MODPRS_N           => (others => '1'),
+        QSFP_MODPRS_N           => (others => '0'), -- fake module is present
         QSFP_INT_N              => (others => ZQSFP_1V8_PORT_INT_N),
 
-        MEM_CLK                     => mem_clk,
-        MEM_RST                     => not mem_rst_n,
+        MEM_CLK                 => mem_clk,
+        MEM_RST                 => not mem_rst_n,
 
-        MEM_AVMM_READY              => mem_avmm_ready,
-        MEM_AVMM_READ               => mem_avmm_read,
-        MEM_AVMM_WRITE              => mem_avmm_write,
-        MEM_AVMM_ADDRESS            => mem_avmm_address,
-        MEM_AVMM_BURSTCOUNT         => mem_avmm_burstcount,
-        MEM_AVMM_WRITEDATA          => mem_avmm_writedata,
-        MEM_AVMM_READDATA           => mem_avmm_readdata,
-        MEM_AVMM_READDATAVALID      => mem_avmm_readdatavalid,
+        MEM_AVMM_READY          => mem_avmm_ready,
+        MEM_AVMM_READ           => mem_avmm_read,
+        MEM_AVMM_WRITE          => mem_avmm_write,
+        MEM_AVMM_ADDRESS        => mem_avmm_address,
+        MEM_AVMM_BURSTCOUNT     => mem_avmm_burstcount,
+        MEM_AVMM_WRITEDATA      => mem_avmm_writedata,
+        MEM_AVMM_READDATA       => mem_avmm_readdata,
+        MEM_AVMM_READDATAVALID  => mem_avmm_readdatavalid,
 
-        EMIF_RST_REQ                => emif_rst_req,
-        EMIF_RST_DONE               => emif_rst_done,
-        EMIF_ECC_USR_INT            => emif_ecc_usr_int,
-        EMIF_CAL_SUCCESS            => emif_cal_success,
-        EMIF_CAL_FAIL               => emif_cal_fail,
+        EMIF_RST_REQ            => emif_rst_req,
+        EMIF_RST_DONE           => emif_rst_done,
+        EMIF_ECC_USR_INT        => emif_ecc_usr_int,
+        EMIF_CAL_SUCCESS        => emif_cal_success,
+        EMIF_CAL_FAIL           => emif_cal_fail,
 
         STATUS_LED_G            => USER_LED_G,
         STATUS_LED_R            => open,
