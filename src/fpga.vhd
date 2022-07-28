@@ -298,11 +298,6 @@ begin
         MEM_BURST_WIDTH         => MEM_BURST_WIDTH,
         AMM_FREQ_KHZ            => 266660,
 
-        USER_GENERIC0           => USER_GENERIC0,
-        USER_GENERIC1           => USER_GENERIC1,
-        USER_GENERIC2           => USER_GENERIC2,
-        USER_GENERIC3           => USER_GENERIC3,
-
         BOARD                   => "DK-DEV-1SDX-P",
         DEVICE                  => "STRATIX10",
 
