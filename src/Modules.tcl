@@ -21,6 +21,7 @@ set MOD "$MOD $ENTITY_BASE/ip/etile_eth_4x10g.ip"
 set MOD "$MOD $ENTITY_BASE/ip/etile_eth_4x25g.ip"
 set MOD "$MOD $ENTITY_BASE/ip/etile_eth_1x100g.ip"
 set MOD "$MOD $ENTITY_BASE/ip/emif_s10dx.ip"
+set MOD "$MOD $ENTITY_BASE/ip/mailbox_client_ip.ip"
 
 # Top-level
 set MOD "$MOD $ENTITY_BASE/fpga.vhd"
