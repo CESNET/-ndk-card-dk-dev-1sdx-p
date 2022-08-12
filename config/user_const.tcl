@@ -11,7 +11,6 @@ set PROJECT_NAME ""
 
 # ETH parameters:
 # ===============
-set ETH_ENABLE        true
 # Number of Ethernet ports, must match number of items in list ETH_PORTS_SPEED !
 set ETH_PORTS         2
 # Speed for each one of the ETH_PORTS (allowed values: 100, 25, 10)

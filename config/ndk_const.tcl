@@ -19,6 +19,12 @@ source $OFM_PATH/build/VhdlPkgGen.tcl
 source $OFM_PATH/build/Shared.tcl
 
 set CARD_NAME "DK-DEV-1SDX-P"
+# Achitecture of Clock generator (INTEL or USP)
+set CLOCK_GEN_ARCH "INTEL"
+# Achitecture of PCIe module (P_TILE, R_TILE or USP)
+set PCIE_MOD_ARCH "P_TILE"
+# Achitecture of Network module (E_TILE, F_TILE, CMAC or EMPTY)
+set NET_MOD_ARCH "E_TILE"
 
 VhdlPkgBegin
 
