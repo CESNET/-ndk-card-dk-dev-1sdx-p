@@ -25,6 +25,8 @@ set CLOCK_GEN_ARCH "INTEL"
 set PCIE_MOD_ARCH "P_TILE"
 # Achitecture of Network module (E_TILE, F_TILE, CMAC or EMPTY)
 set NET_MOD_ARCH "E_TILE"
+# Achitecture of SDM/SYSMON module
+set SDM_SYSMON_ARCH "S10_ADC"
 
 VhdlPkgBegin
 
