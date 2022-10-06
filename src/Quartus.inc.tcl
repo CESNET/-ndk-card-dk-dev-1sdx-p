@@ -1,11 +1,12 @@
 # Quartus.inc.tcl: Quartus.tcl include for DK-DEV-1SDX-P card
-# Copyright (C) 2020 CESNET z. s. p. o.
+# Copyright (C) 2022 CESNET z. s. p. o.
 # Author(s): Jakub Cabal <cabal@cesnet.cz>
+#           Vladislav Valek <valekv@cesnet.cz>
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
 # NDK constants (populates all NDK variables from env)
-source $env(NDK_CONST)
+source $env(CORE_BASE)/config/core_bootstrap.tcl
 
 # Include common card script
 source $CARD_COMMON_BASE/Quartus.inc.tcl
