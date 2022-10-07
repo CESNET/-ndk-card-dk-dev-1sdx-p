@@ -4,13 +4,10 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
-# Globally defined variables
-global CARD_COMMON_BASE
+# converting input list to associative array
+array set ARCHGRP_ARR $ARCHGRP
 
-global BOARD
-set BOARD "DK-DEV-1SDX-P"
-
-set COMPONENTS [list [list "FPGA_COMMON" $CARD_COMMON_BASE $BOARD]]
+set COMPONENTS [list [list "FPGA_COMMON" $ARCHGRP_ARR(CORE_BASE) $ARCHGRP]]
 
 # IP sources
 set MOD "$MOD $ENTITY_BASE/ip/iopll_ip.ip"
