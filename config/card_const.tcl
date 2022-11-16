@@ -21,6 +21,12 @@ set SDM_SYSMON_ARCH "S10_ADC"
 # Total number of DMA modules/streams in FW
 set DMA_MODULES 2
 
+# Total number of QSFP cages
+set QSFP_CAGES       2
+# I2C address of each QSFP cage
+set QSFP_I2C_ADDR(0) "0xF0"
+set QSFP_I2C_ADDR(1) "0xF8"
+
 # ------------------------------------------------------------------------------
 # Other parameters:
 # ------------------------------------------------------------------------------
