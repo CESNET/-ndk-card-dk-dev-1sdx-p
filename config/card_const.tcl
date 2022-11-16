@@ -18,6 +18,8 @@ set PCIE_MOD_ARCH "P_TILE"
 set NET_MOD_ARCH "E_TILE"
 # Achitecture of SDM/SYSMON module
 set SDM_SYSMON_ARCH "S10_ADC"
+# Total number of DMA modules/streams in FW
+set DMA_MODULES 2
 
 # ------------------------------------------------------------------------------
 # Other parameters:
