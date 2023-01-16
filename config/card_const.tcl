@@ -28,6 +28,20 @@ set QSFP_I2C_ADDR(0) "0xF0"
 set QSFP_I2C_ADDR(1) "0xF8"
 
 # ------------------------------------------------------------------------------
+# Checking of parameter compatibility
+# ------------------------------------------------------------------------------
+
+if {!(($PCIE_ENDPOINTS == 1 && $PCIE_GEN == 4 && $PCIE_ENDPOINT_MODE == 0) ||
+      ($PCIE_ENDPOINTS == 2 && $PCIE_GEN == 4 && $PCIE_ENDPOINT_MODE == 1) ||
+      ($PCIE_ENDPOINTS == 4 && $PCIE_GEN == 4 && $PCIE_ENDPOINT_MODE == 1 && $DMA_400G_DEMO)) } {
+    error "Incompatible PCIe configuration: PCIE_ENDPOINTS = $PCIE_ENDPOINTS, PCIE_GEN = $PCIE_GEN, PCIE_ENDPOINT_MODE = $PCIE_ENDPOINT_MODE!
+Allowed PCIe configurations:
+- 1xGen4x16  -- PCIE_GEN=4, PCIE_ENDPOINTS=1, PCIE_ENDPOINT_MODE=0
+- 1xGen4x8x8 -- PCIE_GEN=4, PCIE_ENDPOINTS=2, PCIE_ENDPOINT_MODE=1
+- 2xGen4x8x8 -- PCIE_GEN=4, PCIE_ENDPOINTS=4, PCIE_ENDPOINT_MODE=1; Only for DMA_400G_DEMO!"
+}
+
+# ------------------------------------------------------------------------------
 # Other parameters:
 # ------------------------------------------------------------------------------
 if {$ETH_PORT_SPEED(0) == 10} {
